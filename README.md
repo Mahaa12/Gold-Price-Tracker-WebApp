@@ -1,62 +1,85 @@
-# GoldProject
+# Gold Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Gold Project is a web app for tracking gold prices. It shows current gold prices, price history, and includes a calculator to help estimate gold value. It's built with **Angular 22** and styled using **Tailwind CSS**.
 
-## Development server
+## Prerequisites
 
-To start a local development server, run:
+Before you start, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (includes npm)
+- npm (comes with Node.js)
+- Angular CLI — install it globally with:
+
+  ```bash
+  npm install -g @angular/cli
+  ```
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Run the project
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 3. Open the app
 
-## Code scaffolding
+Once the server is running, open your browser and go to:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```
+http://localhost:4200
+```
+
+The app will automatically reload whenever you edit a source file.
+
+## Creating a New Component
+
+To generate a new component, run:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This creates a new folder with the component's files inside `src/app/components`.
 
-```bash
-ng generate --help
-```
+## Building the Project
 
-## Building
-
-To build the project run:
+To build the app for production:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The compiled output will be placed in the `dist/` folder.
 
-## Running unit tests
+## Project Structure
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Here's a quick overview of the main folders inside `src/app`:
 
-```bash
-ng test
-```
+| Folder | Purpose |
+| --- | --- |
+| `components/` | UI components (e.g. gold price card, calculator, chart, header) |
+| `services/` | Handles data fetching and business logic (e.g. `gold.service.ts`) |
+| `models/` | TypeScript interfaces/types describing data shapes (e.g. `gold.model.ts`) |
+| `data/` | Static or mock data used by the app (e.g. `gold-data.ts`) |
 
-## Running end-to-end tests
+Each component folder typically contains an `.html` (template), `.css` (styles), `.ts` (logic), and `.spec.ts` (tests) file.
 
-For end-to-end (e2e) testing, run:
+## Troubleshooting
 
-```bash
-ng e2e
-```
+**`npm install` fails**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Make sure you're using a supported Node.js version.
+- Delete `node_modules` and `package-lock.json`, then run `npm install` again.
 
-## Additional Resources
+**`ng serve` doesn't start**
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# Gold-Price-Tracker-WebApp
-# Gold-Price-Tracker-WebApp
-# Gold-Price-Tracker-WebApp
+- Make sure Angular CLI is installed (`ng version` to check).
+- Check that port `4200` isn't already in use by another process.
+- Try restarting your terminal and running `ng serve` again.
